@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<ul>
+		{% for agg in aggs %}
+			<li style="color:white;">{{ agg }}</li>
+		{% endfor %}
+	</ul>
+	<ul>
+		{% for avg in route_avgs %}
+			<li style="color:white;">{{ avg[0] }}
+				<ul>
+					<li>Boarding: {{ avg[1] }}</li>
+					<li>Alighting: {{ avg[2] }}</li>
+				</ul>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
